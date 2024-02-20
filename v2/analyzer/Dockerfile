@@ -1,5 +1,12 @@
 FROM ubuntu:20.04
 
+#cat redis-master-deployment.yaml
+#oc apply -f redis-master-deployment.yaml
+#oc apply -f redis-master-service.yaml
+#oc apply -f redis-slave-deployment.yaml
+#oc apply -f redis-slave-service.yaml
+
+
 ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -qq && \
     apt-get install -y -q --no-install-recommends \

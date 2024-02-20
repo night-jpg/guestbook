@@ -18,6 +18,8 @@
 # kubectl apply -f deployment.yml
 # docker build . -t us.icr.io/$MY_NAMESPACE/guestbook:v1 && docker push us.icr.io/$MY_NAMESPACE/guestbook:v1
 # kubectl rollout undo deployment/guestbook --to-revision=1
+#oc tag us.icr.io/$MY_NAMESPACE/guestbook:v1 guestbook:v1 --reference-policy=local --scheduled
+# oc import-image guestbook:v1 --from=us.icr.io/$MY_NAMESPACE/guestbook:v1 --confirm
 
 
 FROM golang:1.15 as builder
